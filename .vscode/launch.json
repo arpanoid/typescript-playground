@@ -6,10 +6,10 @@
           "request": "launch",
           "name": "Debug TypeScript in Node.js",
           "preLaunchTask": "npm: build",
-          "program": "${workspaceFolder}/src/index.ts",
+          "program": "${workspaceFolder}/src/day2/day2.ts",
           "protocol": "inspector",
           "outFiles": [
-            "${workspaceFolder}/dist/**/*.js"
+            "${workspaceFolder}/build/**/*.js"
           ],
           "sourceMaps": true,
           "smartStep": true,
