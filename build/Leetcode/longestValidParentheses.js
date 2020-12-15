@@ -2,20 +2,19 @@
 function longestValidParentheses(s) {
     if (s.length === 0)
         return 0;
-    var array = s.split('');
-    var max = 0;
-    for (var i = 0; i < array.length; i++) {
-        var subArr = array.slice(i);
-        var totalValidParan = validParentheses(subArr);
+    let array = s.split('');
+    let max = 0;
+    for (let i = 0; i < array.length; i++) {
+        const subArr = array.slice(i);
+        const totalValidParan = validParentheses(subArr);
         max = max < totalValidParan ? totalValidParan : max;
     }
     return max * 2;
     function validParentheses(arr) {
-        var count = 0;
-        var max = 0;
-        var totalValid = 0;
-        for (var _i = 0, arr_1 = arr; _i < arr_1.length; _i++) {
-            var paran = arr_1[_i];
+        let count = 0;
+        let max = 0;
+        let totalValid = 0;
+        for (let paran of arr) {
             if (paran === ')' && count === 0) {
                 return totalValid;
             }
